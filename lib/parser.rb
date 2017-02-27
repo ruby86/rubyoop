@@ -5,6 +5,7 @@ class Parser
   def get_title(url)
     doc = Nokogiri::HTML(open(url))
     doc.css('title').text
+    doc.css('h2').text
   end
 end
 
